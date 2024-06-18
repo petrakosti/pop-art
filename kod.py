@@ -42,7 +42,7 @@ blank_image = np.full(((blank_img_height),(blank_img_width),3), background_colou
 
 # ide redom i crta tacke na pozadini
 for y in range(0,downsized_image_height):
-    for x in range(0,downsized_image_width): 
+    for x in range(0,downsized_image_width): #                                                                poluprecnik odredjuje jacina sivog piksela
         cv2.circle(blank_image, (((x*multiplier)+padding),((y*multiplier)+padding)), int((0.6 * multiplier) * ((255-downsized_image[y][x])/255)), dots_colour, -1)
 #                  slika,      kordinate centra,                                    poluprecnik tacke,                                          boja,         oboji
 
